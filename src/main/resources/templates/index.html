@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email test</title>
+</head>
+<body>
+<h1>Newsletter</h1>
+<form action="#" th:action="@{/}" th:object="${email}" method="post">
+    <p>Chcete odebírat můj newsletter? Pokud ano, tak zadejte email</p>
+    <p>Email: <input required type="email" th:field="*{email}" /> <p th:text="${info}"></p> </p>
+    <p><input type="submit" value="Odebírat" /></p>
+    <p th:text="'Počet přístupů: ' + ${visits}"></p>
+    <p th:text="'Počet odběratelů: ' + ${subscribers}"></p>
+</form>
+</body>
+</html>
